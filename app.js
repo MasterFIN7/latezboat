@@ -32,7 +32,7 @@ bot.on(`guildMemberAdd`, member => {
     let wel = member.guild.channels.find("name", "welcome");
     /* Using dC for short. */
 
-    wel.send("Tervetuloa");
+    wel.send(`<@${member.user.id}>,** Tervetuloa!**`);
 
 });
 
