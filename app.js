@@ -29,7 +29,7 @@ bot.on("ready", async () => {
 });
 
 bot.on(`guildMemberAdd`, member => {
-  let welChannel = member.guild.channels.find("LateZ Group", "welcome");
+  let welChannel = member.guild.channels.find(`LateZ Group`, "welcome");
 
   let welEmbed = new Discord.RichEmbed()
   .setAuthor("LateZ Boat","https://i.imgur.com/ldPxOse.png")
