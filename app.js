@@ -29,17 +29,10 @@ bot.on("ready", async () => {
 });
 
 bot.on(`guildMemberAdd`, member => {
-  let welChannel = member.guild.channels.find(`LateZ Group`, "welcome");
-
-  let welEmbed = new Discord.RichEmbed()
-  .setAuthor("LateZ Boat","https://i.imgur.com/ldPxOse.png")
-  .setColor("#cc0081")
-  .setTitle("Tervetuloa")
-  .setTimestamp()
-  .setDescription(`Tervetuloa **${member.user.username}**, palvelimelle **${member.guild.name}**!`);
+  let welChannel = member.guild.channels.find("LateZ Group", "welcome");
 
 
-  welChannel.send(welEmbed);
+  welChannel.send(`**<@${member.user.id}>, Tervetuloa!**`);
 
 });
 
