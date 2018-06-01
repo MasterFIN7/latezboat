@@ -29,10 +29,10 @@ bot.on("ready", async () => {
 });
 
 bot.on(`guildMemberAdd`, member => {
-  let welChannel = member.guild.channels.find("LateZ Group", "welcome");
+  let banChannel = message.guild.channels.find(`LateZ Group`, "welcome");
 
 
-  welChannel.send(`**<@${member.user.id}>, Tervetuloa!**`);
+  welChannel.send(`<@${member.user.id}>, **Tervetuloa!**`);
 
 });
 
