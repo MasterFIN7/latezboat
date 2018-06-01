@@ -28,6 +28,14 @@ bot.on("ready", async () => {
 
 });
 
+bot.on(`guildMemberAdd`, member => {
+    let wel = member.guild.channels.find("name", "welcome");
+    /* Using dC for short. */
+
+    wel.send("Tervetuloa");
+
+});
+
 
 bot.on("message", async message => {
     if(message.author.bot) return;
