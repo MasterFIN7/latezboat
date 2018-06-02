@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Aika", message.createdAt)
   .addField("Syy", kReason);
 
-  let kickChannel = message.guild.channels.find(`name`, "incidents");
+  let kickChannel = message.guild.channels.find(`LateZ Group`, "varoitukset");
   if(!kickChannel) return message.channel.send("En löydä kanavaa!");
 
   message.guild.member(kUser).kick(kReason);
