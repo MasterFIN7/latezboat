@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Aika", message.createdAt)
   .addField("Syy", bReason);
 
-  let banChannel = message.guild.channels.find(`name`, "incidents");
+  let banChannel = message.guild.channels.find(`LateZ Group`, "varoitukset");
   if(!banChannel) return message.channel.send("En löydä kanavaa!");
 
   message.guild.member(bUser).ban(bReason);
