@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Varoitusten määrä", warns[wUser.id].warns)
   .addField("Syy", reason);
 
-  let warnchannel = message.guild.channels.find(`LateZ Group`, "varoitukset");
+  let warnchannel = message.guild.channels.find(`LateZGroup`, "varoitukset");
   if(!warnchannel) return message.reply("En löydä kanavaa!");
 
   warnchannel.send(warnEmbed);
